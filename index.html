@@ -4,67 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sunil Kumar G Yadav | Cloud Consultant</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#f5f7fa; --card:#ffffff; --accent:#6fa8dc; --text:#1f2d3d; --muted:#6b7c93; --success:#2e7d32; }
-    body { margin:0; font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); scroll-behavior:smooth; }
+    :root { --bg:#ffffff; --border:#e5e7eb; --accent:#5b8def; --text:#111827; --muted:#6b7280; }
+    body { margin:0; font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); }
 
-    nav {
-      position:sticky; top:0; background:#ffffffcc; backdrop-filter:blur(8px);
-      display:flex; justify-content:center; gap:25px; padding:12px; z-index:1000;
-      border-bottom:1px solid #e0e6ed;
-    }
-    nav a { color:var(--muted); text-decoration:none; font-size:13px; }
-    nav a:hover { color:var(--accent); }
+    nav { position:sticky; top:0; background:#fff; display:flex; justify-content:center; gap:18px; padding:10px; border-bottom:1px solid var(--border); font-size:12px; }
+    nav a { color:var(--muted); text-decoration:none; }
 
-    header { padding:40px 20px 20px; }
-    .hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:25px; max-width:1000px; margin:auto; }
-    .hero img {
-      width:150px; height:150px; object-fit:cover;
-      object-position: top; /* fix head cut */
-      border-radius:10px; border:2px solid var(--accent);
-      margin-top:10px;
-    }
+    header { padding:24px 15px; }
+    .hero { display:flex; align-items:center; gap:18px; max-width:900px; margin:auto; }
+    .hero img { width:100px; height:100px; object-fit:cover; object-position:top; border-radius:6px; }
 
-    h1 { margin:0; font-size:32px; }
-    .subtitle { color:var(--muted); margin:5px 0; }
-    .contact { font-size:13px; color:var(--muted); line-height:1.5; }
+    h1 { margin:0; font-size:20px; font-weight:600; }
+    .subtitle { color:var(--muted); font-size:12px; }
+    .contact { font-size:12px; color:var(--muted); line-height:1.4; }
 
-    .badge {
-      display:inline-block; margin-top:8px; padding:5px 10px;
-      background:#e8f5e9; color:var(--success); border-radius:20px;
-      font-size:12px; font-weight:600;
-    }
+    .badge { display:inline-block; margin-top:6px; padding:2px 6px; background:#f0fdf4; color:#166534; border-radius:4px; font-size:10px; }
 
-    .btn {
-      display:inline-block; margin-top:10px; padding:8px 16px;
-      background:var(--accent); color:white; border-radius:6px; text-decoration:none;
-      font-size:13px;
-    }
+    .btn { display:inline-block; margin-top:6px; padding:5px 10px; border:1px solid var(--border); color:var(--text); text-decoration:none; font-size:11px; }
 
-    .btn-outline {
-      display:inline-block; margin-top:10px; margin-left:8px; padding:8px 16px;
-      border:1px solid var(--accent); color:var(--accent); border-radius:6px; text-decoration:none;
-      font-size:13px;
-    }
+    section { max-width:900px; margin:auto; padding:16px 15px; }
+    h2 { font-size:13px; margin-bottom:6px; color:var(--muted); font-weight:500; }
 
-    section { max-width:1000px; margin:auto; padding:35px 20px; }
-    h2 { border-left:4px solid var(--accent); padding-left:8px; margin-bottom:10px; font-size:20px; }
+    .grid { display:grid; gap:6px; }
 
-    .card {
-      background:var(--card); padding:18px; border-radius:8px; margin-top:10px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.04);
-      transition:0.2s;
-    }
-    .card:hover { transform:translateY(-2px); }
+    .card { border:1px solid var(--border); padding:10px; font-size:12px; }
+    .card strong { display:block; font-size:12px; color:var(--text); }
+    .metric { font-weight:600; color:var(--accent); }
 
-    .grid { display:grid; gap:15px; }
-    .skills { grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); }
-    .skill { background:#eef4fb; padding:10px; border-radius:6px; text-align:center; font-size:13px; }
+    .skill-bar { margin-bottom:8px; font-size:11px; }
+    .bar { width:100%; height:5px; background:#f3f4f6; }
+    .bar div { height:100%; background:var(--accent); }
 
-    .certs img { width:100px; margin:8px; }
-
-    footer { text-align:center; padding:20px; color:var(--muted); font-size:13px; }
+    footer { text-align:center; padding:12px; font-size:11px; color:var(--muted); border-top:1px solid var(--border); }
   </style>
 </head>
 <body>
@@ -73,7 +46,6 @@
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
-  <a href="#certs">Certifications</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -82,68 +54,58 @@
     <img src="profile.jpg" alt="Sunil Photo" />
     <div>
       <h1>Sunil Kumar G Yadav</h1>
-      <p class="subtitle">Azure & Microsoft 365 Engineer | Cloud Consultant</p>
-      <span class="badge">🟢 Open to Work</span>
-      <p class="contact">📍 Thane, India<br>
-      📧 Sunil.yd@outlook.com | <a href="https://www.linkedin.com/in/sunilyd/" target="_blank">LinkedIn</a><br>
-      Open to Relocation – Germany</p>
-      <a class="btn" href="Sunil_Yadav_CV.pdf" download>⬇ Download CV</a>
-      <a class="btn-outline" href="https://www.linkedin.com/in/sunilyd/" target="_blank">💬 Chat on LinkedIn</a>
+      <div class="subtitle">Azure & M365 Engineer</div>
+      <div class="badge">Open to Work</div>
+      <div class="contact">Thane, India • Sunil.yd@outlook.com • <a href="https://www.linkedin.com/in/sunilyd/" target="_blank">LinkedIn</a></div>
+      <a class="btn" href="Sunil_Yadav_CV.pdf" download>Download CV</a>
     </div>
   </div>
 </header>
 
 <section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    14+ years of experience in Azure and Microsoft 365 with expertise in large-scale migrations (15,000+ users), hybrid cloud, and automation.
+  <h2>Value Summary</h2>
+  <div class="grid">
+    <div class="card"><span class="metric">14+ Years</span> delivering Azure & M365 solutions</div>
+    <div class="card"><span class="metric">40,000+ Mailboxes</span> managed in enterprise environments</div>
+    <div class="card"><span class="metric">15,000+ Users</span> migrated with near-zero downtime</div>
+    <div class="card">Expert in <strong>Exchange Online & Hybrid</strong></div>
+    <div class="card">Automation via <strong>PowerShell & Graph API</strong></div>
   </div>
 </section>
 
 <section id="skills">
-  <h2>Skills</h2>
-  <div class="grid skills">
-    <div class="skill">Azure</div>
-    <div class="skill">M365</div>
-    <div class="skill">Exchange Online</div>
-    <div class="skill">PowerShell</div>
-    <div class="skill">Graph API</div>
-    <div class="skill">Security</div>
+  <h2>Core Strengths</h2>
+  <div class="card">
+    <div class="skill-bar">Exchange Online<div class="bar"><div style="width:100%"></div></div></div>
+    <div class="skill-bar">M365<div class="bar"><div style="width:85%"></div></div></div>
+    <div class="skill-bar">Azure<div class="bar"><div style="width:75%"></div></div></div>
+    <div class="skill-bar">Security<div class="bar"><div style="width:75%"></div></div></div>
+    <div class="skill-bar">PowerShell<div class="bar"><div style="width:75%"></div></div></div>
+    <div class="skill-bar">Graph API<div class="bar"><div style="width:50%"></div></div></div>
   </div>
 </section>
 
 <section id="projects">
-  <h2>Case Studies</h2>
-  <div class="card">
-    <strong>Enterprise Migration</strong>
-    <p>Migrated 15,000+ users with near-zero downtime.</p>
-  </div>
-  <div class="card">
-    <strong>Automation</strong>
-    <p>Reduced manual workload using PowerShell & Graph API.</p>
-  </div>
-</section>
-
-<section id="certs">
-  <h2>Certifications</h2>
-  <div class="card certs">
-    <img src="azure.png" />
-    <img src="mcsa.png" />
-    <img src="mcse.png" />
-    <img src="mct.png" />
+  <h2>Impact Projects</h2>
+  <div class="grid">
+    <div class="card"><strong>Exchange Online Migration</strong><span class="metric">15,000+ Users</span> migrated with zero business disruption</div>
+    <div class="card"><strong>Enterprise Mail Platform</strong><span class="metric">40,000+ Mailboxes</span> optimized for performance & stability</div>
+    <div class="card"><strong>Automation Program</strong> Reduced manual effort using PowerShell & Graph API</div>
+    <div class="card"><strong>Tenant-to-Tenant Migration</strong> Delivered seamless cross-tenant transition</div>
+    <div class="card"><strong>Security & Compliance</strong> Implemented DLP, auditing & governance controls</div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
-    <p>Email: Sunil.yd@outlook.com</p>
-    <p><a href="https://www.linkedin.com/in/sunilyd/" target="_blank">💬 Chat with me on LinkedIn</a></p>
+    Sunil.yd@outlook.com<br>
+    <a href="https://www.linkedin.com/in/sunilyd/" target="_blank">Chat on LinkedIn</a>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Sunil Kumar G Yadav</p>
+  © 2026 Sunil Kumar G Yadav
 </footer>
 
 </body>

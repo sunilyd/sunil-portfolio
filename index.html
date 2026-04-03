@@ -7,25 +7,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root { --bg:#0b1220; --card:#121a2b; --accent:#4f9cff; --text:#e6edf7; --muted:#9fb0c9; }
-    body { margin:0; font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); }
-    header { padding:60px 20px; background: radial-gradient(circle at top, #12213f, #0b1220); }
+    body { margin:0; font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); scroll-behavior:smooth; }
+
+    /* NAVBAR */
+    nav {
+      position:sticky; top:0; background:#0b1220cc; backdrop-filter:blur(10px);
+      display:flex; justify-content:center; gap:30px; padding:15px; z-index:1000;
+    }
+    nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+    nav a:hover { color:white; }
+
+    /* HERO */
+    header { padding:60px 20px; }
     .hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:30px; max-width:1100px; margin:auto; }
-    .hero img { width:150px; border-radius:50%; border:3px solid var(--accent); }
+    .hero img { width:160px; border-radius:50%; border:3px solid var(--accent); }
     h1 { margin:0; font-size:36px; }
     .subtitle { color:var(--muted); }
     .contact { font-size:14px; color:var(--muted); }
     .btn { display:inline-block; margin-top:15px; padding:10px 20px; background:var(--accent); color:white; border-radius:6px; text-decoration:none; }
-    section { max-width:1100px; margin:auto; padding:50px 20px; }
+
+    section { max-width:1100px; margin:auto; padding:60px 20px; }
     h2 { border-left:4px solid var(--accent); padding-left:10px; }
-    .card { background:var(--card); padding:20px; border-radius:10px; margin-top:20px; }
+
+    .card { background:var(--card); padding:25px; border-radius:12px; margin-top:20px; transition:0.3s; }
+    .card:hover { transform:translateY(-5px); }
+
     .grid { display:grid; gap:20px; }
     .skills { grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); }
-    .skill { background:#1a2336; padding:10px; border-radius:8px; text-align:center; }
-    .certs img { width:120px; margin:10px; }
+    .skill { background:#1a2336; padding:12px; border-radius:8px; text-align:center; }
+
+    .certs img { width:120px; margin:10px; transition:0.3s; }
+    .certs img:hover { transform:scale(1.1); }
+
     footer { text-align:center; padding:30px; color:var(--muted); }
   </style>
 </head>
 <body>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certs">Certifications</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <header>
   <div class="hero">
@@ -41,14 +66,14 @@
   </div>
 </header>
 
-<section>
-  <h2>Professional Summary</h2>
+<section id="about">
+  <h2>About Me</h2>
   <div class="card">
-    Azure & Microsoft 365 Engineer with 14 years of experience managing enterprise-scale environments (40,000+ mailboxes). Expert in Exchange Online, hybrid cloud, and automation using PowerShell & Graph API.
+    14+ years of experience in Azure and Microsoft 365 with expertise in large-scale migrations (15,000+ users), hybrid cloud, and automation. I focus on building scalable, secure, and efficient enterprise systems aligned with business goals.
   </div>
 </section>
 
-<section>
+<section id="skills">
   <h2>Skills</h2>
   <div class="grid skills">
     <div class="skill">Azure</div>
@@ -60,7 +85,19 @@
   </div>
 </section>
 
-<section>
+<section id="projects">
+  <h2>Case Studies</h2>
+  <div class="card">
+    <strong>Enterprise Migration</strong>
+    <p>Migrated 15,000+ users → Achieved near-zero downtime and improved performance.</p>
+  </div>
+  <div class="card">
+    <strong>Automation</strong>
+    <p>Reduced manual workload using PowerShell & Graph API → Increased efficiency.</p>
+  </div>
+</section>
+
+<section id="certs">
   <h2>Certifications</h2>
   <div class="card certs">
     <img src="azure.png" />
@@ -70,19 +107,16 @@
   </div>
 </section>
 
-<section>
-  <h2>Key Projects</h2>
+<section id="contact">
+  <h2>Contact</h2>
   <div class="card">
-    <ul>
-      <li>Migrated 15,000+ mailboxes with minimal downtime</li>
-      <li>Automated operations reducing manual effort</li>
-      <li>Improved security and compliance posture</li>
-    </ul>
+    <p>Email: Sunil.yd@outlook.com</p>
+    <p>LinkedIn: sunilyd</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Sunil Kumar G Yadav</p>
+  <p>© 2026 Sunil Kumar G Yadav | Cloud Consultant</p>
 </footer>
 
 </body>

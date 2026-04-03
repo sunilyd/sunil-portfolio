@@ -6,47 +6,65 @@
   <title>Sunil Kumar G Yadav | Cloud Consultant</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#f5f7fa; --card:#ffffff; --accent:#6fa8dc; --text:#1f2d3d; --muted:#6b7c93; }
+    :root { --bg:#f5f7fa; --card:#ffffff; --accent:#6fa8dc; --text:#1f2d3d; --muted:#6b7c93; --success:#2e7d32; }
     body { margin:0; font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); scroll-behavior:smooth; }
 
     nav {
       position:sticky; top:0; background:#ffffffcc; backdrop-filter:blur(8px);
-      display:flex; justify-content:center; gap:30px; padding:15px; z-index:1000;
+      display:flex; justify-content:center; gap:25px; padding:12px; z-index:1000;
       border-bottom:1px solid #e0e6ed;
     }
-    nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+    nav a { color:var(--muted); text-decoration:none; font-size:13px; }
     nav a:hover { color:var(--accent); }
 
-    header { padding:60px 20px; }
-    .hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:30px; max-width:1100px; margin:auto; }
-    .hero img { width:150px; height:150px; object-fit:cover; border-radius:10px; border:2px solid var(--accent); }
+    header { padding:40px 20px 20px; }
+    .hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:25px; max-width:1000px; margin:auto; }
+    .hero img {
+      width:150px; height:150px; object-fit:cover;
+      object-position: top; /* fix head cut */
+      border-radius:10px; border:2px solid var(--accent);
+      margin-top:10px;
+    }
 
-    h1 { margin:0; font-size:34px; }
-    .subtitle { color:var(--muted); }
-    .contact { font-size:14px; color:var(--muted); }
+    h1 { margin:0; font-size:32px; }
+    .subtitle { color:var(--muted); margin:5px 0; }
+    .contact { font-size:13px; color:var(--muted); line-height:1.5; }
+
+    .badge {
+      display:inline-block; margin-top:8px; padding:5px 10px;
+      background:#e8f5e9; color:var(--success); border-radius:20px;
+      font-size:12px; font-weight:600;
+    }
 
     .btn {
-      display:inline-block; margin-top:15px; padding:10px 20px;
+      display:inline-block; margin-top:10px; padding:8px 16px;
       background:var(--accent); color:white; border-radius:6px; text-decoration:none;
+      font-size:13px;
     }
 
-    section { max-width:1100px; margin:auto; padding:60px 20px; }
-    h2 { border-left:4px solid var(--accent); padding-left:10px; }
+    .btn-outline {
+      display:inline-block; margin-top:10px; margin-left:8px; padding:8px 16px;
+      border:1px solid var(--accent); color:var(--accent); border-radius:6px; text-decoration:none;
+      font-size:13px;
+    }
+
+    section { max-width:1000px; margin:auto; padding:35px 20px; }
+    h2 { border-left:4px solid var(--accent); padding-left:8px; margin-bottom:10px; font-size:20px; }
 
     .card {
-      background:var(--card); padding:25px; border-radius:10px; margin-top:20px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      background:var(--card); padding:18px; border-radius:8px; margin-top:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.04);
       transition:0.2s;
     }
-    .card:hover { transform:translateY(-3px); }
+    .card:hover { transform:translateY(-2px); }
 
-    .grid { display:grid; gap:20px; }
-    .skills { grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); }
-    .skill { background:#eef4fb; padding:12px; border-radius:6px; text-align:center; }
+    .grid { display:grid; gap:15px; }
+    .skills { grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); }
+    .skill { background:#eef4fb; padding:10px; border-radius:6px; text-align:center; font-size:13px; }
 
-    .certs img { width:110px; margin:10px; }
+    .certs img { width:100px; margin:8px; }
 
-    footer { text-align:center; padding:30px; color:var(--muted); }
+    footer { text-align:center; padding:20px; color:var(--muted); font-size:13px; }
   </style>
 </head>
 <body>
@@ -65,10 +83,12 @@
     <div>
       <h1>Sunil Kumar G Yadav</h1>
       <p class="subtitle">Azure & Microsoft 365 Engineer | Cloud Consultant</p>
-      <p class="contact">📍 Thane, India <br>
+      <span class="badge">🟢 Open to Work</span>
+      <p class="contact">📍 Thane, India<br>
       📧 Sunil.yd@outlook.com | <a href="https://www.linkedin.com/in/sunilyd/" target="_blank">LinkedIn</a><br>
       Open to Relocation – Germany</p>
       <a class="btn" href="Sunil_Yadav_CV.pdf" download>⬇ Download CV</a>
+      <a class="btn-outline" href="https://www.linkedin.com/in/sunilyd/" target="_blank">💬 Chat on LinkedIn</a>
     </div>
   </div>
 </header>
@@ -117,8 +137,8 @@
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
-    <p>Email: sunil.yd@outlook.com</p>
-    <p>LinkedIn: sunilyd</p>
+    <p>Email: Sunil.yd@outlook.com</p>
+    <p><a href="https://www.linkedin.com/in/sunilyd/" target="_blank">💬 Chat with me on LinkedIn</a></p>
   </div>
 </section>
 

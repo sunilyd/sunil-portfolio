@@ -64,11 +64,15 @@
 
     .cert-badges { display:flex; flex-wrap:wrap; gap:15px; align-items:center; }
     .cert-badges img {
-      height:50px;
-      padding:6px;
+      height:70px;
+      padding:8px;
       border:1px solid var(--border);
-      border-radius:6px;
+      border-radius:8px;
       background:#fff;
+      transition:0.2s;
+    }
+    .cert-badges img:hover {
+      transform:scale(1.08);
     }
     .cert-badge {
       border:1px solid var(--accent);

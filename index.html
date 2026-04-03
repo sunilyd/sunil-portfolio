@@ -8,90 +8,81 @@
   <style>
     :root { --bg:#0b1220; --card:#121a2b; --accent:#4f9cff; --text:#e6edf7; --muted:#9fb0c9; }
     body { margin:0; font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); }
-    header { padding:90px 20px; text-align:center; background: radial-gradient(circle at top, #12213f, #0b1220); }
-    h1 { margin:0; font-size:44px; }
-    .subtitle { color:var(--muted); margin-top:10px; }
-    .contact { margin-top:20px; font-size:14px; color:var(--muted); }
-    .btn { display:inline-block; margin-top:25px; padding:12px 25px; background:var(--accent); color:white; border-radius:6px; text-decoration:none; }
-    section { max-width:1100px; margin:auto; padding:60px 20px; }
+    header { padding:60px 20px; background: radial-gradient(circle at top, #12213f, #0b1220); }
+    .hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:30px; max-width:1100px; margin:auto; }
+    .hero img { width:150px; border-radius:50%; border:3px solid var(--accent); }
+    h1 { margin:0; font-size:36px; }
+    .subtitle { color:var(--muted); }
+    .contact { font-size:14px; color:var(--muted); }
+    .btn { display:inline-block; margin-top:15px; padding:10px 20px; background:var(--accent); color:white; border-radius:6px; text-decoration:none; }
+    section { max-width:1100px; margin:auto; padding:50px 20px; }
     h2 { border-left:4px solid var(--accent); padding-left:10px; }
-    .card { background:var(--card); padding:25px; border-radius:12px; margin-top:20px; box-shadow:0 10px 25px rgba(0,0,0,0.3); }
+    .card { background:var(--card); padding:20px; border-radius:10px; margin-top:20px; }
     .grid { display:grid; gap:20px; }
     .skills { grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); }
-    .skill { background:#1a2336; padding:12px; border-radius:8px; text-align:center; }
+    .skill { background:#1a2336; padding:10px; border-radius:8px; text-align:center; }
+    .certs img { width:120px; margin:10px; }
     footer { text-align:center; padding:30px; color:var(--muted); }
-    a { color:var(--accent); }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Sunil Kumar G Yadav</h1>
-  <p class="subtitle">Azure & Microsoft 365 Engineer | Cloud Consultant</p>
-  <p class="contact">📍 Thane, Maharashtra, India | 🌍 Indian <br>
-  📧 Sunil.yd@outlook.com | 🔗 <a href="https://www.linkedin.com/in/sunilyd/" target="_blank">LinkedIn</a><br>
-  Open to Relocation – Germany</p>
-  <a class="btn" href="#contact">Connect With Me</a>
+  <div class="hero">
+    <img src="profile.jpg" alt="Sunil Photo" />
+    <div>
+      <h1>Sunil Kumar G Yadav</h1>
+      <p class="subtitle">Azure & Microsoft 365 Engineer | Cloud Consultant</p>
+      <p class="contact">📍 Thane, India | 📞 +91 9594551161<br>
+      📧 Sunil.yd@outlook.com | <a href="https://www.linkedin.com/in/sunilyd/" target="_blank">LinkedIn</a><br>
+      Open to Relocation – Germany</p>
+      <a class="btn" href="Sunil_Yadav_CV.pdf" download>⬇ Download CV</a>
+    </div>
+  </div>
 </header>
+
 <section>
   <h2>Professional Summary</h2>
   <div class="card">
-    Azure & Microsoft 365 Engineer with 14 years of experience managing enterprise-scale infrastructure and messaging systems. Expert in Exchange Online, hybrid cloud architecture, and automation using PowerShell & Graph API. Successfully managed 40,000+ mailboxes and executed migrations of 15,000+ users, improving reliability, security, and operational efficiency.
+    Azure & Microsoft 365 Engineer with 14 years of experience managing enterprise-scale environments (40,000+ mailboxes). Expert in Exchange Online, hybrid cloud, and automation using PowerShell & Graph API.
   </div>
 </section>
+
 <section>
-  <h2>Technical Skills</h2>
+  <h2>Skills</h2>
   <div class="grid skills">
     <div class="skill">Azure</div>
-    <div class="skill">Microsoft 365</div>
+    <div class="skill">M365</div>
     <div class="skill">Exchange Online</div>
     <div class="skill">PowerShell</div>
     <div class="skill">Graph API</div>
-    <div class="skill">Hybrid Cloud</div>
-    <div class="skill">Azure AD</div>
-    <div class="skill">Security & Compliance</div>
+    <div class="skill">Security</div>
   </div>
 </section>
+
 <section>
-  <h2>Key Experience</h2>
-  <div class="card">
-    <strong>Bauer Corporate IT Services (2020–Present)</strong>
-    <ul>
-      <li>Managed Azure & M365 for 6000+ users</li>
-      <li>Migrated 10,000+ mailboxes to Exchange Online</li>
-      <li>Automated operations using PowerShell & Graph API</li>
-      <li>Delivered SLA/KPI reports and improved efficiency</li>
-    </ul>
-  </div>
-  <div class="card">
-    <strong>Spectraforce Technologies (2018–2020)</strong>
-    <ul>
-      <li>Handled tenant-to-tenant M365 migrations</li>
-      <li>Managed Exchange, Teams, SharePoint environments</li>
-    </ul>
+  <h2>Certifications</h2>
+  <div class="card certs">
+    <img src="azure.png" />
+    <img src="mcsa.png" />
+    <img src="mcse.png" />
+    <img src="mct.png" />
   </div>
 </section>
+
 <section>
-  <h2>Certifications & Achievements</h2>
+  <h2>Key Projects</h2>
   <div class="card">
     <ul>
-      <li>Microsoft Certified Trainer (MCT)</li>
-      <li>Azure Administrator (AZ-104)</li>
-      <li>MCSE Messaging & Infrastructure</li>
-      <li>Multiple excellence and innovation awards</li>
+      <li>Migrated 15,000+ mailboxes with minimal downtime</li>
+      <li>Automated operations reducing manual effort</li>
+      <li>Improved security and compliance posture</li>
     </ul>
-  </div>
-</section>
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    <p>Email: <a href="mailto:Sunil.yd@outlook.com">Sunil.yd@outlook.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sunilyd/" target="_blank">sunilyd</a></p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Sunil Kumar G Yadav | Cloud Consultant</p>
+  <p>© 2026 Sunil Kumar G Yadav</p>
 </footer>
 
 </body>

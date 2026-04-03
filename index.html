@@ -6,38 +6,45 @@
   <title>Sunil Kumar G Yadav | Cloud Consultant</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#0b1220; --card:#121a2b; --accent:#4f9cff; --text:#e6edf7; --muted:#9fb0c9; }
+    :root { --bg:#f5f7fa; --card:#ffffff; --accent:#6fa8dc; --text:#1f2d3d; --muted:#6b7c93; }
     body { margin:0; font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); scroll-behavior:smooth; }
 
-    /* NAVBAR */
     nav {
-      position:sticky; top:0; background:#0b1220cc; backdrop-filter:blur(10px);
+      position:sticky; top:0; background:#ffffffcc; backdrop-filter:blur(8px);
       display:flex; justify-content:center; gap:30px; padding:15px; z-index:1000;
+      border-bottom:1px solid #e0e6ed;
     }
     nav a { color:var(--muted); text-decoration:none; font-size:14px; }
-    nav a:hover { color:white; }
+    nav a:hover { color:var(--accent); }
 
-    /* HERO */
     header { padding:60px 20px; }
     .hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:30px; max-width:1100px; margin:auto; }
-    .hero img { width:160px; border-radius:50%; border:3px solid var(--accent); }
-    h1 { margin:0; font-size:36px; }
+    .hero img { width:150px; height:150px; object-fit:cover; border-radius:10px; border:2px solid var(--accent); }
+
+    h1 { margin:0; font-size:34px; }
     .subtitle { color:var(--muted); }
     .contact { font-size:14px; color:var(--muted); }
-    .btn { display:inline-block; margin-top:15px; padding:10px 20px; background:var(--accent); color:white; border-radius:6px; text-decoration:none; }
+
+    .btn {
+      display:inline-block; margin-top:15px; padding:10px 20px;
+      background:var(--accent); color:white; border-radius:6px; text-decoration:none;
+    }
 
     section { max-width:1100px; margin:auto; padding:60px 20px; }
     h2 { border-left:4px solid var(--accent); padding-left:10px; }
 
-    .card { background:var(--card); padding:25px; border-radius:12px; margin-top:20px; transition:0.3s; }
-    .card:hover { transform:translateY(-5px); }
+    .card {
+      background:var(--card); padding:25px; border-radius:10px; margin-top:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:0.2s;
+    }
+    .card:hover { transform:translateY(-3px); }
 
     .grid { display:grid; gap:20px; }
     .skills { grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); }
-    .skill { background:#1a2336; padding:12px; border-radius:8px; text-align:center; }
+    .skill { background:#eef4fb; padding:12px; border-radius:6px; text-align:center; }
 
-    .certs img { width:120px; margin:10px; transition:0.3s; }
-    .certs img:hover { transform:scale(1.1); }
+    .certs img { width:110px; margin:10px; }
 
     footer { text-align:center; padding:30px; color:var(--muted); }
   </style>
@@ -58,7 +65,7 @@
     <div>
       <h1>Sunil Kumar G Yadav</h1>
       <p class="subtitle">Azure & Microsoft 365 Engineer | Cloud Consultant</p>
-      <p class="contact">📍 Thane, India <br>
+      <p class="contact">📍 Thane, India | 📞 +91 9594551161<br>
       📧 Sunil.yd@outlook.com | <a href="https://www.linkedin.com/in/sunilyd/" target="_blank">LinkedIn</a><br>
       Open to Relocation – Germany</p>
       <a class="btn" href="Sunil_Yadav_CV.pdf" download>⬇ Download CV</a>
@@ -69,7 +76,7 @@
 <section id="about">
   <h2>About Me</h2>
   <div class="card">
-    14+ years of experience in Azure and Microsoft 365 with expertise in large-scale migrations (15,000+ users), hybrid cloud, and automation. I focus on building scalable, secure, and efficient enterprise systems aligned with business goals.
+    14+ years of experience in Azure and Microsoft 365 with expertise in large-scale migrations (15,000+ users), hybrid cloud, and automation.
   </div>
 </section>
 
@@ -89,11 +96,11 @@
   <h2>Case Studies</h2>
   <div class="card">
     <strong>Enterprise Migration</strong>
-    <p>Migrated 15,000+ users → Achieved near-zero downtime and improved performance.</p>
+    <p>Migrated 15,000+ users with near-zero downtime.</p>
   </div>
   <div class="card">
     <strong>Automation</strong>
-    <p>Reduced manual workload using PowerShell & Graph API → Increased efficiency.</p>
+    <p>Reduced manual workload using PowerShell & Graph API.</p>
   </div>
 </section>
 
@@ -110,13 +117,13 @@
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
-    <p>Email: sunil.yd@outlook.com</p>
+    <p>Email: Sunil.yd@outlook.com</p>
     <p>LinkedIn: sunilyd</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Sunil Kumar G Yadav | Cloud Consultant</p>
+  <p>© 2026 Sunil Kumar G Yadav</p>
 </footer>
 
 </body>
